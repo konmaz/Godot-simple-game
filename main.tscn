@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c5rm6q7vmph3d"]
+[gd_scene load_steps=3 format=3 uid="uid://c5rm6q7vmph3d"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_slk0j"]
+[ext_resource type="PackedScene" uid="uid://bqdqt101kkdaw" path="res://BG.tscn" id="2_54ybi"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_slk0j")
@@ -20,4 +21,7 @@ offset_bottom = 435.0
 tooltip_text = "Quit"
 text = "Quit"
 
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_54ybi")]
+
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
